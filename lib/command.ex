@@ -1,66 +1,57 @@
 defmodule Command do
-  import Actions
-  import Store
+  import TodoList
 
-  def list(), do: command(["list"])
-  def add(description), do: command(["add", description])
-  def check(id), do: command(["check", id])
-  def delete(id), do: command(["delete", id])
+  def run_command_on_state(todo_list, command) do
+    case command do
+      :list -> cmd_list(todo_list)
+      {:add, description} -> cmd_add(todo_list, description)
+      {:check, id} -> cmd_check(todo_list, id)
+      {:uncheck, id} -> cmd_uncheck(todo_list, id)
+      {:delete, id} -> cmd_delete(todo_list, id)
+    end
+  end
 
   # Server API
-  def command(args) do
-    actions = Store.load() |> exec_command(args)
 
-    case actions do
-      :none ->
-        nil
-
-      actions when is_list(actions) ->
-        actions
-        |> Enum.each(&run_action/1)
-
-      action ->
-        run_action(action)
-    end
+  def cmd_add(todo_list, description) do
+    next_state = add(todo_list, description)
+    {next_state, ["Todo created"]}
   end
 
-  def exec_command(todo_list, ["add", description]) do
-    [
-      action_print("Todo created"),
-      action_save(TodoList.add(todo_list, description))
-    ]
-  end
-
-  def exec_command(todo_list, ["list"]) do
+  def cmd_list(todo_list) do
     if todo_list == %{} do
-      action_print("No todos")
+      {todo_list, ["No todos"]}
     else
-      todo_list
-      |> Map.keys()
-      |> Enum.map(&show_todo(todo_list, &1))
-      |> Enum.map(&action_print/1)
+      messages =
+        todo_list
+        |> Map.keys()
+        |> Enum.map(&show_todo(todo_list, &1))
+
+      {todo_list, messages}
     end
   end
 
-  def exec_command(todo_list, ["check", id]) do
+  def cmd_check(todo_list, id) do
     if Map.has_key?(todo_list, id) do
-      [action_print("Todo updated")]
+      {check(todo_list, id), ["Todo checked"]}
     else
-      [action_print("Id not found (#{id})")]
+      {todo_list, ["No todo with id #{id}"]}
     end
   end
 
-  def exec_command(todo_list, ["delete", id]) do
-    # TODO
+  def cmd_uncheck(todo_list, id) do
+    if Map.has_key?(todo_list, id) do
+      {uncheck(todo_list, id), ["Todo unchecked"]}
+    else
+      {todo_list, ["No todo with id #{id}"]}
+    end
   end
 
-  def show_todo(todo_list, id) do
-    case Map.get(todo_list, id) do
-      %{checked: true, description: description} ->
-        "DONE:  #{description} (#{id})"
-
-      %{checked: false, description: description} ->
-        "TO-DO: #{description} (#{id})"
+  def cmd_delete(todo_list, id) do
+    if Map.has_key?(todo_list, id) do
+      {delete(todo_list, id), ["Todo deleted"]}
+    else
+      {todo_list, ["No todo with id #{id}"]}
     end
   end
 end

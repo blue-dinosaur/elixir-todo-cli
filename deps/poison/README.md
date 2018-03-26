@@ -1,5 +1,10 @@
 # Poison
 
+[![Travis](https://img.shields.io/travis/devinus/poison.svg?style=flat-square)](https://travis-ci.org/devinus/poison)
+[![Hex.pm](https://img.shields.io/hexpm/v/poison.svg?style=flat-square)](https://hex.pm/packages/poison)
+[![Hex.pm](https://img.shields.io/hexpm/dt/poison.svg?style=flat-square)](https://hex.pm/packages/poison)
+[![Gratipay](https://img.shields.io/gratipay/devinus.svg?style=flat-square)](https://gratipay.com/devinus)
+
 Poison is a new JSON library for Elixir focusing on wicked-fast **speed**
 without sacrificing **simplicity**, **completeness**, or **correctness**.
 
@@ -12,10 +17,32 @@ several techniques that are [known to benefit HiPE][2] for native compilation,
 Preliminary benchmarking has sometimes put Poison's performance closer to
 `jiffy`, and almost always faster than existing Elixir libraries.
 
+## Installation
+
+First, add Poison to your `mix.exs` dependencies:
+
+```elixir
+def deps do
+  [{:poison, "~> 1.5"}]
+end
+```
+
+Then, update your dependencies:
+
+```sh-session
+$ mix deps.get
+```
+
+## Usage
+
 ```elixir
 defmodule Person do
+  @derive [Poison.Encoder]
   defstruct [:name, :age]
 end
+
+Poison.encode!(%Person{name: "Devin Torres", age: 27})
+#=> "{\"name\":\"Devin Torres\",\"age\":27}"
 
 Poison.decode!(~s({"name": "Devin Torres", "age": 27}), as: Person)
 #=> %Person{name: "Devin Torres", age: 27}
@@ -39,6 +66,19 @@ iex> Poison.Parser.parse!(~s({"name": "Devin Torres", "age": 27}), keys: :atoms!
 %{name: "Devin Torres", age: 27}
 ```
 
+Note that `keys: :atoms!` reuses existing atoms, i.e. if `:name` was not
+allocated before the call, you will encounter an `argument error` message.
+
+You can use the `keys: :atoms` variant to make sure all atoms are created as
+needed.  However, unless you absolutely know what you're doing, do **not** do
+it.  Atoms are not garbage-collected, see
+[Erlang Efficiency Guide](http://www.erlang.org/doc/efficiency_guide/commoncaveats.html)
+for more info:
+
+> Atoms are not garbage-collected. Once an atom is created, it will never be
+> removed. The emulator will terminate if the limit for the number of atoms
+> (1048576 by default) is reached.
+
 ## Encoder
 
 ```iex
@@ -52,20 +92,21 @@ passable to any IO subsystem without conversion.
 
 ```elixir
 defimpl Poison.Encoder, for: Person do
-  def encode(%{name: name, age: age}, _options) do
-    Poison.Encoder.BitString.encode("#{name} (#{age})")
+  def encode(%{name: name, age: age}, options) do
+    Poison.Encoder.BitString.encode("#{name} (#{age})", options)
   end
 end
 ```
 
+For maximum performance, make sure you `@derive [Poison.Encoder]` for any struct
+you plan on encoding.
+
 ## Benchmarking
 
 ```sh-session
-$ mix archive.install https://github.com/alco/benchfella/releases/download/archive/benchfella-0.0.2.ez
 $ mix deps.get
-$ MIX_ENV=bench mix compile
 $ MIX_ENV=bench mix compile.protocols
-$ elixir -pa _build/bench/consolidated -pa _build/bench/lib/\*/ebin -S mix bench
+$ MIX_ENV=bench elixir -pa _build/bench/lib/\*/ebin -pa _build/bench/consolidated -S mix bench
 ```
 
 ## License

@@ -13,21 +13,31 @@ defmodule TodoList do
     set_checked(todo_list, id, false)
   end
 
-  def set_checked(todo_list, id, checked) when is_map(todo_list) do
-    if Map.has_key?(todo_list, id) do
-      Map.update!(todo_list, id, fn todo ->
-        %{todo | checked: false}
-      end)
-    else
-      todo_list
-    end
-  end
-
   def delete(todo_list, id) when is_map(todo_list) do
     Map.delete(todo_list, id)
   end
 
   def get_next_id(todo_list) when is_map(todo_list) do
-    next_id = 1 + (todo_list |> Map.keys() |> Enum.count())
+    if todo_list == %{} do
+      1
+    else
+      1 + (todo_list |> Map.keys() |> Enum.max())
+    end
+  end
+
+  def show_todo(todo_list, id) do
+    case Map.get(todo_list, id) do
+      %{checked: true, description: description} ->
+        "DONE:  #{description} (#{id})"
+
+      %{checked: false, description: description} ->
+        "TO-DO: #{description} (#{id})"
+    end
+  end
+
+  defp set_checked(todo_list, id, checked) when is_map(todo_list) do
+    Map.update!(todo_list, id, fn todo ->
+      %{todo | checked: checked}
+    end)
   end
 end

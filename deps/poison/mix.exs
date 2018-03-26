@@ -6,10 +6,11 @@ defmodule Poison.Mixfile do
   def project do
     [app: :poison,
      version: @version,
-     elixir: "~> 0.15.1",
-     description: "An experimental Elixir JSON library",
+     elixir: "~> 1.0",
+     description: "The fastest JSON library for Elixir",
      deps: deps,
-     package: package]
+     package: package,
+     consolidate_protocols: Mix.env != :test]
   end
 
   # Configuration for the OTP application
@@ -29,14 +30,17 @@ defmodule Poison.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    [{:jiffy, github: "davisp/jiffy", only: :bench},
-     {:jsex, github: "talentdeficit/jsex", only: :bench},
+    [{:earmark, "~> 0.2", only: :docs},
+     {:ex_doc, "~> 0.11", only: :docs},
+     {:benchfella, "~> 0.3", only: :bench},
+     {:jiffy, github: "davisp/jiffy", only: :bench},
+     {:exjsx, github: "talentdeficit/exjsx", only: :bench},
      {:jazz, github: "meh/jazz", only: :bench}]
   end
 
   defp package do
     [files: ~w(lib mix.exs README.md LICENSE UNLICENSE VERSION),
-     contributors: ["Devin Torres"],
+     maintainers: ["Devin Torres"],
      licenses: ["Unlicense"],
      links: %{"GitHub" => "https://github.com/devinus/poison"}]
   end

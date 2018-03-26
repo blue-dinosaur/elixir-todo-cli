@@ -7,7 +7,9 @@ defmodule Todo.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      escript: [main_module: CLI],
+      test_coverage: [tool: ExCoveralls]
     ]
   end
 
@@ -21,7 +23,8 @@ defmodule Todo.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:poison, "~> 1.0.0"}
+      {:poison, "~> 1.5.0"},
+      {:excoveralls, "~> 0.8", only: :test}
     ]
   end
 end
