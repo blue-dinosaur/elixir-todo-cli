@@ -1,6 +1,12 @@
 defmodule CommandTest do
   use ExUnit.Case
 
+  test "run_command_on_state/2, error" do
+    todo_list = %{} |> TodoList.add("Foo") |> TodoList.add("Bar")
+    {_, messages} = Command.run_command_on_state(todo_list, {:parse_error, "Some kind of error"})
+    assert messages == ["Error: Some kind of error"]
+  end
+
   test "run_command_on_state/2, list" do
     todo_list = %{} |> TodoList.add("Foo") |> TodoList.add("Bar")
     {_, messages} = Command.run_command_on_state(todo_list, :list)

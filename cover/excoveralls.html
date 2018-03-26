@@ -415,7 +415,7 @@ function find(y) {
       <div id='stats' class='high'>
         <div class='percentage'>84.9</div>
         <div class='sloc'>53</div>
-        <div class='hits'>201</div>
+        <div class='hits'>206</div>
         <div class='misses'>8</div>
       </div>
       <div id='files'>
@@ -449,13 +449,61 @@ function find(y) {
                       <tr>
                         <td class='line'>1</td>
                         <td class='hits'></td>
-                        <td class='source'>  import Parser</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
                   
                       <tr>
                         <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Este módulo tem o ponto de entrada do programa (`main`), que</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'>  parametriza e repete o loop principal.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>  import Parser</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
                         <td class='hits'></td>
                         <td class='source'>  import Command</td>
                       </tr>
@@ -463,7 +511,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>3</td>
+                        <td class='line'>9</td>
                         <td class='hits'></td>
                         <td class='source'>  import Store</td>
                       </tr>
@@ -471,7 +519,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>4</td>
+                        <td class='line'>10</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -479,7 +527,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>5</td>
+                        <td class='line'>11</td>
                         <td class='hits'></td>
                         <td class='source'>  def main(args) do</td>
                       </tr>
@@ -487,7 +535,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>6</td>
+                        <td class='line'>12</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -495,7 +543,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>7</td>
+                        <td class='line'>13</td>
                         <td class='hits'>0</td>
                         <td class='source'>    reader = fn -&gt; IO.gets(&quot;\n&gt;&gt; &quot;) end</td>
                       </tr>
@@ -503,7 +551,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>8</td>
+                        <td class='line'>14</td>
                         <td class='hits'>0</td>
                         <td class='source'>    writer = fn s -&gt; IO.puts(s) end</td>
                       </tr>
@@ -511,7 +559,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>9</td>
+                        <td class='line'>15</td>
                         <td class='hits'>0</td>
                         <td class='source'>    file_reader = fn -&gt; File.read!(&quot;todos.json&quot;) end</td>
                       </tr>
@@ -519,15 +567,15 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>10</td>
+                        <td class='line'>16</td>
                         <td class='hits'>0</td>
-                        <td class='source'>    file_writer = fn r -&gt; File.write!(&quot;todos.json&quot;, encode(r)) end</td>
+                        <td class='source'>    file_writer = fn r -&gt; File.write!(&quot;todos.json&quot;, r) end</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>11</td>
+                        <td class='line'>17</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -535,7 +583,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>12</td>
+                        <td class='line'>18</td>
                         <td class='hits'>0</td>
                         <td class='source'>    result = loop(reader, writer, file_reader, file_writer)</td>
                       </tr>
@@ -543,7 +591,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>13</td>
+                        <td class='line'>19</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -551,7 +599,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>14</td>
+                        <td class='line'>20</td>
                         <td class='hits'>0</td>
                         <td class='source'>    if result == :quit do</td>
                       </tr>
@@ -559,7 +607,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>15</td>
+                        <td class='line'>21</td>
                         <td class='hits'>0</td>
                         <td class='source'>      IO.puts(&quot;Goodbye&quot;)</td>
                       </tr>
@@ -567,7 +615,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>16</td>
+                        <td class='line'>22</td>
                         <td class='hits'></td>
                         <td class='source'>    else</td>
                       </tr>
@@ -575,7 +623,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>17</td>
+                        <td class='line'>23</td>
                         <td class='hits'>0</td>
                         <td class='source'>      main(args)</td>
                       </tr>
@@ -583,7 +631,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>18</td>
+                        <td class='line'>24</td>
                         <td class='hits'></td>
                         <td class='source'>    end</td>
                       </tr>
@@ -591,7 +639,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>19</td>
+                        <td class='line'>25</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -599,7 +647,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>20</td>
+                        <td class='line'>26</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -607,7 +655,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>21</td>
+                        <td class='line'>27</td>
                         <td class='hits'></td>
                         <td class='source'>  def loop(console_reader, console_writer, file_reader, file_writer) do</td>
                       </tr>
@@ -615,7 +663,7 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>22</td>
+                        <td class='line'>28</td>
                         <td class='hits'>1</td>
                         <td class='source'>    command = console_reader.() |&gt; String.trim() |&gt; parse_command</td>
                       </tr>
@@ -623,7 +671,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>23</td>
+                        <td class='line'>29</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -631,7 +679,7 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>24</td>
+                        <td class='line'>30</td>
                         <td class='hits'>1</td>
                         <td class='source'>    if command == :quit do</td>
                       </tr>
@@ -639,7 +687,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>25</td>
+                        <td class='line'>31</td>
                         <td class='hits'></td>
                         <td class='source'>      :quit</td>
                       </tr>
@@ -647,7 +695,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>26</td>
+                        <td class='line'>32</td>
                         <td class='hits'></td>
                         <td class='source'>    else</td>
                       </tr>
@@ -655,7 +703,7 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>27</td>
+                        <td class='line'>33</td>
                         <td class='hits'>1</td>
                         <td class='source'>      state = file_reader.() |&gt; Store.decode</td>
                       </tr>
@@ -663,7 +711,7 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>28</td>
+                        <td class='line'>34</td>
                         <td class='hits'>1</td>
                         <td class='source'>      {next_state, messages} = run_command_on_state(state, command)</td>
                       </tr>
@@ -671,7 +719,7 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>29</td>
+                        <td class='line'>35</td>
                         <td class='hits'>1</td>
                         <td class='source'>      for m &lt;- messages, do: console_writer.(m)</td>
                       </tr>
@@ -679,7 +727,7 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>30</td>
+                        <td class='line'>36</td>
                         <td class='hits'>1</td>
                         <td class='source'>      next_state |&gt; encode |&gt; file_writer.()</td>
                       </tr>
@@ -687,368 +735,11 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>31</td>
+                        <td class='line'>37</td>
                         <td class='hits'></td>
                         <td class='source'>      :continue</td>
                       </tr>
                   
-                
-                  
-                      <tr>
-                        <td class='line'>32</td>
-                        <td class='hits'></td>
-                        <td class='source'>    end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>33</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>34</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>35</td>
-                        <td class='hits'></td>
-                        <td class='source'>end</td>
-                      </tr>
-                  
-                
-              </tbody>
-            </table>
-          </div>
-        
-          <div class='file'>
-            <h2 id='lib/command.ex'>lib/command.ex</h1>
-            <div id='stats' class='high'>
-              <div class='percentage'>100</div>
-              <div class='sloc'>16</div>
-              <div class='hits'>38</div>
-              <div class='misses'>0</div>
-            </div>
-            <table id='source'>
-              <thead>
-                <tr>
-                  <th>Line</th>
-                  <th>Hits</th>
-                  <th>Source</th>
-                </tr>
-              <tbody>
-                
-                  
-                      <tr>
-                        <td class='line'>0</td>
-                        <td class='hits'></td>
-                        <td class='source'>defmodule Command do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>1</td>
-                        <td class='hits'></td>
-                        <td class='source'>  import TodoList</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>2</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>3</td>
-                        <td class='hits'></td>
-                        <td class='source'>  def run_command_on_state(todo_list, command) do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>4</td>
-                        <td class='hits'>10</td>
-                        <td class='source'>    case command do</td>
-                      </tr>
-                    
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>5</td>
-                        <td class='hits'>3</td>
-                        <td class='source'>      :list -&gt; cmd_list(todo_list)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>6</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>      {:add, description} -&gt; cmd_add(todo_list, description)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>7</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>      {:check, id} -&gt; cmd_check(todo_list, id)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>8</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>      {:uncheck, id} -&gt; cmd_uncheck(todo_list, id)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>9</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>      {:delete, id} -&gt; cmd_delete(todo_list, id)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>10</td>
-                        <td class='hits'></td>
-                        <td class='source'>    end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>11</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>12</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>13</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # Server API</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>14</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>15</td>
-                        <td class='hits'></td>
-                        <td class='source'>  def cmd_add(todo_list, description) do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>16</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>    next_state = add(todo_list, description)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>17</td>
-                        <td class='hits'></td>
-                        <td class='source'>    {next_state, [&quot;Todo created&quot;]}</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>18</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>19</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>20</td>
-                        <td class='hits'></td>
-                        <td class='source'>  def cmd_list(todo_list) do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>21</td>
-                        <td class='hits'>3</td>
-                        <td class='source'>    if todo_list == %{} do</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>22</td>
-                        <td class='hits'></td>
-                        <td class='source'>      {todo_list, [&quot;No todos&quot;]}</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>23</td>
-                        <td class='hits'></td>
-                        <td class='source'>    else</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>24</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>      messages =</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>25</td>
-                        <td class='hits'></td>
-                        <td class='source'>        todo_list</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>26</td>
-                        <td class='hits'></td>
-                        <td class='source'>        |&gt; Map.keys()</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>27</td>
-                        <td class='hits'>3</td>
-                        <td class='source'>        |&gt; Enum.map(&amp;show_todo(todo_list, &amp;1))</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>28</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>29</td>
-                        <td class='hits'></td>
-                        <td class='source'>      {todo_list, messages}</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>30</td>
-                        <td class='hits'></td>
-                        <td class='source'>    end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>31</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>32</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>33</td>
-                        <td class='hits'></td>
-                        <td class='source'>  def cmd_check(todo_list, id) do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>34</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>    if Map.has_key?(todo_list, id) do</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>35</td>
-                        <td class='hits'></td>
-                        <td class='source'>      {check(todo_list, id), [&quot;Todo checked&quot;]}</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>36</td>
-                        <td class='hits'></td>
-                        <td class='source'>    else</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>37</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>      {todo_list, [&quot;No todo with id #{id}&quot;]}</td>
-                      </tr>
-                    
                 
                   
                       <tr>
@@ -1078,61 +769,66 @@ function find(y) {
                       <tr>
                         <td class='line'>41</td>
                         <td class='hits'></td>
-                        <td class='source'>  def cmd_uncheck(todo_list, id) do</td>
+                        <td class='source'>end</td>
                       </tr>
                   
                 
-                  
-                      <tr class='hit'>
-                        <td class='line'>42</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>    if Map.has_key?(todo_list, id) do</td>
-                      </tr>
-                    
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/command.ex'>lib/command.ex</h1>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>17</div>
+              <div class='hits'>39</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
                 
                   
                       <tr>
-                        <td class='line'>43</td>
+                        <td class='line'>0</td>
                         <td class='hits'></td>
-                        <td class='source'>      {uncheck(todo_list, id), [&quot;Todo unchecked&quot;]}</td>
+                        <td class='source'>defmodule Command do</td>
                       </tr>
                   
                 
                   
                       <tr>
-                        <td class='line'>44</td>
+                        <td class='line'>1</td>
                         <td class='hits'></td>
-                        <td class='source'>    else</td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
                       </tr>
                   
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>45</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>      {todo_list, [&quot;No todo with id #{id}&quot;]}</td>
-                      </tr>
-                    
                 
                   
                       <tr>
-                        <td class='line'>46</td>
+                        <td class='line'>2</td>
                         <td class='hits'></td>
-                        <td class='source'>    end</td>
+                        <td class='source'>  O módulo de comando recebe um estado da lista de todos (`todo_list`)</td>
                       </tr>
                   
                 
                   
                       <tr>
-                        <td class='line'>47</td>
+                        <td class='line'>3</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
+                        <td class='source'>  e um comando (já parseado) e aplica o comando.</td>
                       </tr>
                   
                 
                   
                       <tr>
-                        <td class='line'>48</td>
+                        <td class='line'>4</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1140,55 +836,119 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>49</td>
+                        <td class='line'>5</td>
                         <td class='hits'></td>
-                        <td class='source'>  def cmd_delete(todo_list, id) do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>50</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>    if Map.has_key?(todo_list, id) do</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>51</td>
-                        <td class='hits'></td>
-                        <td class='source'>      {delete(todo_list, id), [&quot;Todo deleted&quot;]}</td>
+                        <td class='source'>  A função principal é a run_command_on_state, que retorna o estado</td>
                       </tr>
                   
                 
                   
                       <tr>
-                        <td class='line'>52</td>
+                        <td class='line'>6</td>
                         <td class='hits'></td>
-                        <td class='source'>    else</td>
+                        <td class='source'>  resultante da aplicação de um comando e mensagens que serão mostradas ao</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>  usuário.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Este módulo é completamente puro.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'>  A lógica da TodoList fica num módulo a parte,</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'>  e idealmente não deveria ter nada que lide diretamente com a estrutura</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>  de dados subjacente neste modulo.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>  import TodoList</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def run_command_on_state(todo_list, {:parse_error, message}) do</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>53</td>
+                        <td class='line'>18</td>
                         <td class='hits'>1</td>
-                        <td class='source'>      {todo_list, [&quot;No todo with id #{id}&quot;]}</td>
+                        <td class='source'>    {todo_list, [&quot;Error: #{message}&quot;]}</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>54</td>
-                        <td class='hits'></td>
-                        <td class='source'>    end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>55</td>
+                        <td class='line'>19</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1196,7 +956,415 @@ function find(y) {
                 
                   
                       <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def run_command_on_state(todo_list, command) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>21</td>
+                        <td class='hits'>10</td>
+                        <td class='source'>    case command do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>22</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>      :list -&gt; cmd_list(todo_list)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>23</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>      {:add, description} -&gt; cmd_add(todo_list, description)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>24</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>      {:check, id} -&gt; cmd_check(todo_list, id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>25</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>      {:uncheck, id} -&gt; cmd_uncheck(todo_list, id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>26</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>      {:delete, id} -&gt; cmd_delete(todo_list, id)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>27</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>28</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>29</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>30</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def cmd_add(todo_list, description) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>31</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    next_state = add(todo_list, description)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>32</td>
+                        <td class='hits'></td>
+                        <td class='source'>    {next_state, [&quot;Todo created&quot;]}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>33</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>34</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>35</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def cmd_list(todo_list) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>36</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    if todo_list == %{} do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>37</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {todo_list, [&quot;No todos&quot;]}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>38</td>
+                        <td class='hits'></td>
+                        <td class='source'>    else</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>39</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>      messages =</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>40</td>
+                        <td class='hits'></td>
+                        <td class='source'>        todo_list</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>41</td>
+                        <td class='hits'></td>
+                        <td class='source'>        |&gt; Map.keys()</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>42</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>        |&gt; Enum.map(&amp;show_todo(todo_list, &amp;1))</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>43</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>44</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {todo_list, messages}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>45</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>46</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>47</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>48</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def cmd_check(todo_list, id) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>49</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    if Map.has_key?(todo_list, id) do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>50</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {check(todo_list, id), [&quot;Todo checked&quot;]}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>51</td>
+                        <td class='hits'></td>
+                        <td class='source'>    else</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>52</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>      {todo_list, [&quot;No todo with id #{id}&quot;]}</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>53</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>54</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>55</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
                         <td class='line'>56</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def cmd_uncheck(todo_list, id) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>57</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    if Map.has_key?(todo_list, id) do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>58</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {uncheck(todo_list, id), [&quot;Todo unchecked&quot;]}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>59</td>
+                        <td class='hits'></td>
+                        <td class='source'>    else</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>60</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>      {todo_list, [&quot;No todo with id #{id}&quot;]}</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>61</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>62</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>63</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>64</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def cmd_delete(todo_list, id) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>65</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    if Map.has_key?(todo_list, id) do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>66</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {delete(todo_list, id), [&quot;Todo deleted&quot;]}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>67</td>
+                        <td class='hits'></td>
+                        <td class='source'>    else</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>68</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>      {todo_list, [&quot;No todo with id #{id}&quot;]}</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>69</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>70</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>71</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -1235,7 +1403,7 @@ function find(y) {
                       <tr>
                         <td class='line'>1</td>
                         <td class='hits'></td>
-                        <td class='source'>  def parse_command(&quot;quit&quot;), do: :quit</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1243,7 +1411,7 @@ function find(y) {
                       <tr>
                         <td class='line'>2</td>
                         <td class='hits'></td>
-                        <td class='source'>  def parse_command(&quot;list&quot;), do: :list</td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
                       </tr>
                   
                 
@@ -1251,7 +1419,7 @@ function find(y) {
                       <tr>
                         <td class='line'>3</td>
                         <td class='hits'></td>
-                        <td class='source'>  def parse_command(&quot;add &quot; &lt;&gt; description), do: {:add, description}</td>
+                        <td class='source'>  Este módulo obtem comandos a partir de strings.</td>
                       </tr>
                   
                 
@@ -1259,7 +1427,7 @@ function find(y) {
                       <tr>
                         <td class='line'>4</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  A checagem de tipo dos comandos que requerem um id numérico</td>
                       </tr>
                   
                 
@@ -1267,23 +1435,23 @@ function find(y) {
                       <tr>
                         <td class='line'>5</td>
                         <td class='hits'></td>
-                        <td class='source'>  def parse_command(&quot;delete &quot; &lt;&gt; id) do</td>
+                        <td class='source'>  é feita aqui.</td>
                       </tr>
                   
                 
                   
-                      <tr class='hit'>
+                      <tr>
                         <td class='line'>6</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>    case Integer.parse(id) do</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
                       </tr>
-                    
+                  
                 
                   
                       <tr>
                         <td class='line'>7</td>
                         <td class='hits'></td>
-                        <td class='source'>      {id_num, &quot;&quot;} -&gt; {:delete, id_num}</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1291,7 +1459,7 @@ function find(y) {
                       <tr>
                         <td class='line'>8</td>
                         <td class='hits'></td>
-                        <td class='source'>      _ -&gt; {:parse_error, &quot;Id must be an integer&quot;}</td>
+                        <td class='source'>  def parse_command(&quot;quit&quot;), do: :quit</td>
                       </tr>
                   
                 
@@ -1299,7 +1467,7 @@ function find(y) {
                       <tr>
                         <td class='line'>9</td>
                         <td class='hits'></td>
-                        <td class='source'>    end</td>
+                        <td class='source'>  def parse_command(&quot;list&quot;), do: :list</td>
                       </tr>
                   
                 
@@ -1307,7 +1475,7 @@ function find(y) {
                       <tr>
                         <td class='line'>10</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
+                        <td class='source'>  def parse_command(&quot;add &quot; &lt;&gt; description), do: {:add, description}</td>
                       </tr>
                   
                 
@@ -1323,7 +1491,7 @@ function find(y) {
                       <tr>
                         <td class='line'>12</td>
                         <td class='hits'></td>
-                        <td class='source'>  def parse_command(&quot;check &quot; &lt;&gt; id) do</td>
+                        <td class='source'>  def parse_command(&quot;delete &quot; &lt;&gt; id) do</td>
                       </tr>
                   
                 
@@ -1339,7 +1507,7 @@ function find(y) {
                       <tr>
                         <td class='line'>14</td>
                         <td class='hits'></td>
-                        <td class='source'>      {id_num, &quot;&quot;} -&gt; {:check, id_num}</td>
+                        <td class='source'>      {id_num, &quot;&quot;} -&gt; {:delete, id_num}</td>
                       </tr>
                   
                 
@@ -1379,7 +1547,7 @@ function find(y) {
                       <tr>
                         <td class='line'>19</td>
                         <td class='hits'></td>
-                        <td class='source'>  def parse_command(&quot;uncheck &quot; &lt;&gt; id) do</td>
+                        <td class='source'>  def parse_command(&quot;check &quot; &lt;&gt; id) do</td>
                       </tr>
                   
                 
@@ -1395,7 +1563,7 @@ function find(y) {
                       <tr>
                         <td class='line'>21</td>
                         <td class='hits'></td>
-                        <td class='source'>      {id_num, &quot;&quot;} -&gt; {:uncheck, id_num}</td>
+                        <td class='source'>      {id_num, &quot;&quot;} -&gt; {:check, id_num}</td>
                       </tr>
                   
                 
@@ -1435,13 +1603,69 @@ function find(y) {
                       <tr>
                         <td class='line'>26</td>
                         <td class='hits'></td>
+                        <td class='source'>  def parse_command(&quot;uncheck &quot; &lt;&gt; id) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>27</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>    case Integer.parse(id) do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>28</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {id_num, &quot;&quot;} -&gt; {:uncheck, id_num}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>29</td>
+                        <td class='hits'></td>
+                        <td class='source'>      _ -&gt; {:parse_error, &quot;Id must be an integer&quot;}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>30</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>31</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>32</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>33</td>
+                        <td class='hits'></td>
                         <td class='source'>  def parse_command(_), do: {:parse_error, &quot;Command not understood&quot;}</td>
                       </tr>
                   
                 
                   
                       <tr>
-                        <td class='line'>27</td>
+                        <td class='line'>34</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -1455,8 +1679,8 @@ function find(y) {
             <h2 id='lib/store.ex'>lib/store.ex</h1>
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
-              <div class='sloc'>7</div>
-              <div class='hits'>31</div>
+              <div class='sloc'>6</div>
+              <div class='hits'>26</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1488,31 +1712,31 @@ function find(y) {
                       <tr>
                         <td class='line'>2</td>
                         <td class='hits'></td>
-                        <td class='source'>  def encode(todos) do</td>
+                        <td class='source'>  def encode(todos) when is_map(todos) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>    make_records(todos)</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>3</td>
+                        <td class='line'>4</td>
                         <td class='hits'>2</td>
-                        <td class='source'>    make_records(todos) |&gt; Poison.encode!()</td>
+                        <td class='source'>    |&gt; Poison.encode!()</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>4</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
                         <td class='line'>5</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  end</td>
                       </tr>
                   
                 
@@ -1520,7 +1744,7 @@ function find(y) {
                       <tr>
                         <td class='line'>6</td>
                         <td class='hits'></td>
-                        <td class='source'>  def make_records(todos) do</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1528,7 +1752,7 @@ function find(y) {
                       <tr>
                         <td class='line'>7</td>
                         <td class='hits'></td>
-                        <td class='source'>    todos</td>
+                        <td class='source'>  def make_records(todos) when is_map(todos) do</td>
                       </tr>
                   
                 
@@ -1536,13 +1760,21 @@ function find(y) {
                       <tr>
                         <td class='line'>8</td>
                         <td class='hits'></td>
+                        <td class='source'>    todos</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
                         <td class='source'>    |&gt; Map.to_list()</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>9</td>
+                        <td class='line'>10</td>
                         <td class='hits'>4</td>
                         <td class='source'>    |&gt; Enum.map(fn {id, todo} -&gt;</td>
                       </tr>
@@ -1550,7 +1782,7 @@ function find(y) {
                 
                   
                       <tr class='hit'>
-                        <td class='line'>10</td>
+                        <td class='line'>11</td>
                         <td class='hits'>7</td>
                         <td class='source'>      %{id: id, description: todo.description, checked: todo.checked}</td>
                       </tr>
@@ -1558,7 +1790,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>11</td>
+                        <td class='line'>12</td>
                         <td class='hits'></td>
                         <td class='source'>    end)</td>
                       </tr>
@@ -1566,7 +1798,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>12</td>
+                        <td class='line'>13</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1574,7 +1806,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>13</td>
+                        <td class='line'>14</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1582,17 +1814,9 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>14</td>
-                        <td class='hits'></td>
-                        <td class='source'>  def decode(raw) do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
                         <td class='line'>15</td>
                         <td class='hits'></td>
-                        <td class='source'>    raw</td>
+                        <td class='source'>  def decode(raw) when is_binary(raw) do</td>
                       </tr>
                   
                 
@@ -1600,23 +1824,23 @@ function find(y) {
                       <tr>
                         <td class='line'>16</td>
                         <td class='hits'></td>
+                        <td class='source'>    raw</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
                         <td class='source'>    |&gt; Poison.decode!(keys: :atoms)</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>17</td>
+                        <td class='line'>18</td>
                         <td class='hits'>3</td>
                         <td class='source'>    |&gt; Enum.reduce(%{}, fn record, store -&gt;</td>
-                      </tr>
-                    
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>18</td>
-                        <td class='hits'>5</td>
-                        <td class='source'>      IO.puts inspect(record)</td>
                       </tr>
                     
                 
@@ -1669,7 +1893,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>13</div>
-              <div class='hits'>120</div>
+              <div class='hits'>129</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1700,7 +1924,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>2</td>
-                        <td class='hits'>19</td>
+                        <td class='hits'>21</td>
                         <td class='source'>    next_id = get_next_id(todo_list)</td>
                       </tr>
                     
@@ -1708,7 +1932,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>3</td>
-                        <td class='hits'>19</td>
+                        <td class='hits'>21</td>
                         <td class='source'>    todo = %{description: description, checked: false}</td>
                       </tr>
                     
@@ -1716,7 +1940,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>4</td>
-                        <td class='hits'>19</td>
+                        <td class='hits'>21</td>
                         <td class='source'>    Map.put(todo_list, next_id, todo)</td>
                       </tr>
                     
@@ -1844,7 +2068,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>20</td>
-                        <td class='hits'>20</td>
+                        <td class='hits'>22</td>
                         <td class='source'>    if todo_list == %{} do</td>
                       </tr>
                     
@@ -1868,7 +2092,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>23</td>
-                        <td class='hits'>7</td>
+                        <td class='hits'>8</td>
                         <td class='source'>      1 + (todo_list |&gt; Map.keys() |&gt; Enum.max())</td>
                       </tr>
                     
