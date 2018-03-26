@@ -1,4 +1,11 @@
 defmodule Parser do
+
+  @moduledoc """
+  Este módulo obtem comandos a partir de strings.
+  A checagem de tipo dos comandos que requerem um id numérico
+  é feita aqui.
+  """
+
   def parse_command("quit"), do: :quit
   def parse_command("list"), do: :list
   def parse_command("add " <> description), do: {:add, description}

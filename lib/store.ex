@@ -1,10 +1,11 @@
 defmodule Store do
 
-  def encode(todos) do
-    make_records(todos) |> Poison.encode!()
+  def encode(todos) when is_map(todos) do
+    make_records(todos)
+    |> Poison.encode!()
   end
 
-  def make_records(todos) do
+  def make_records(todos) when is_map(todos) do
     todos
     |> Map.to_list()
     |> Enum.map(fn {id, todo} ->
@@ -12,11 +13,10 @@ defmodule Store do
     end)
   end
 
-  def decode(raw) do
+  def decode(raw) when is_binary(raw) do
     raw
     |> Poison.decode!(keys: :atoms)
     |> Enum.reduce(%{}, fn record, store ->
-      IO.puts inspect(record)
       %{id: id, description: description, checked: checked} = record
       Map.put(store, id, %{description: description, checked: checked})
     end)

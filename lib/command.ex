@@ -1,6 +1,23 @@
 defmodule Command do
+  @moduledoc """
+  O módulo de comando recebe um estado da lista de todos (`todo_list`)
+  e um comando (já parseado) e aplica o comando.
+
+  A função principal é a run_command_on_state, que retorna o estado
+  resultante da aplicação de um comando e mensagens que serão mostradas ao
+  usuário.
+
+  Este módulo é completamente puro.
+
+  A lógica da TodoList fica num módulo a parte,
+  e idealmente não deveria ter nada que lide diretamente com a estrutura
+  de dados subjacente neste modulo.
+  """
   import TodoList
 
+  def run_command_on_state(todo_list, {:parse_error, message}) do
+    {todo_list, ["Error: #{message}"]}
+  end
   def run_command_on_state(todo_list, command) do
     case command do
       :list -> cmd_list(todo_list)
@@ -10,8 +27,6 @@ defmodule Command do
       {:delete, id} -> cmd_delete(todo_list, id)
     end
   end
-
-  # Server API
 
   def cmd_add(todo_list, description) do
     next_state = add(todo_list, description)

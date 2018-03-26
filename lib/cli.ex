@@ -1,4 +1,10 @@
 defmodule CLI do
+
+  @moduledoc """
+  Este módulo tem o ponto de entrada do programa (`main`), que
+  parametriza e repete o loop principal.
+  """
+
   import Parser
   import Command
   import Store
@@ -8,7 +14,7 @@ defmodule CLI do
     reader = fn -> IO.gets("\n>> ") end
     writer = fn s -> IO.puts(s) end
     file_reader = fn -> File.read!("todos.json") end
-    file_writer = fn r -> File.write!("todos.json", encode(r)) end
+    file_writer = fn r -> File.write!("todos.json", r) end
 
     result = loop(reader, writer, file_reader, file_writer)
 
